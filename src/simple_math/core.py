@@ -7,7 +7,7 @@ All functions use basic `float` types only.
 
 from typing import List
 
-def add(a: float, b: float) -> float:
+def add(x: float, y: float) -> float:
     """
     Return the sum of two numbers.
 
@@ -17,10 +17,10 @@ def add(a: float, b: float) -> float:
         >>> add(-3.0, 1.0)
         -2.0
     """
-    return a+b
+    return x+y
 
 
-def safe_divide(a: float, b: float) -> float:
+def safe_divide(x: float, y: float) -> float:
     """
     Divide `a` by `b`. Raise ValueError when `b` is zero.
 
@@ -32,11 +32,11 @@ def safe_divide(a: float, b: float) -> float:
             ...
         ValueError: denominator must not be zero
     """
-    if (b == 0):
+    if (y == 0):
       raise ValueError("denominator must not be zero") 
-    return a/b
+    return x/y
 
-def average(xs: List[float]) -> float:
+def average(ps: List[float]) -> float:
     """
     Compute the arithmetic mean of a non-empty list of floats.
 
@@ -48,6 +48,6 @@ def average(xs: List[float]) -> float:
             ...
         ValueError: xs must not be empty
     """
-    if (xs ==[]):
+    if (ps ==[]):
         raise ValueError("xs must not be empty")
-    return(sum(xs)/len(xs))
+    return(sum(ps)/len(ps))
